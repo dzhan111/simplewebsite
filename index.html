@@ -1,62 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+<head id="top">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .copy-email {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function copyEmail() {
+            const email = "zhandavid4@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard: " + email);
+            }).catch(err => {
+                console.error("Failed to copy email: ", err);
+            });
+        }
+    </script>
 </head>
-<body>
-    
 
-    <h1>David Zhan</h1>
-    <img src="IMG_4691.jpeg" alt="David Zhan" style="width:400px; height:auto;">
-    <div class="about"> 
-        <h2>About</h2>
-        <p> I'm a student at the University of Pennsylvania studying Computer Science. <br>
-            My interests include machine Learning, mobile app development, and software development.
-        </p>
-    
-    
-    </div>
-    <br>
-    <br>
+<body id="body">
 
-    <div class = "exp" >
-        <h2>Experience</h2>
-        <h3>Software Engineering Intern @Ventoscity </h3>
-        Developed the mobile app. Includes bluetooth pairing, GPT powered camera for analyzing food fiber content, and well designed app flow.
-
-
-
-
-    </div>
-    <br><br>
-
-    <div class="projects">
-        <h2> Projects</h2>
-        
-        <h3><a href="https://github.com/dzhan111/instagram">Instagram</a>  </h3>
-        <h4>Flutter, Firebase </h4>
-        <p>A full stack mobile app that mimics all of Instagram's functionalities, including user accounts, posts, comments, likes and follows. 
+    <div id="about">
+        <h1>Hi, I'm David Zhan 	&#128512;</h1>
+        <p>I study CS at the University of Pennsylvania, currently on track to graduate in 2026. <br><br>
+        I am interested in full stack dev, mobile apps, and data engineering.
 
         </p>
-        
-        <br>
-
-        <h3><a href="https://github.com/dzhan111/WordHunt-Solver">Wordhunt Solver</a>  </h3>
-        <h4>Python, PyGame </h4>
-        <p>A solver + UI for the popular iMessage game Wordhunt. 
+        <div class="row">
+            <a href="#projects"> See my projects</a>
+            <br>
+            <a href="#exp">  experience</a>
             
-        </p>
+        </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <a href="https://www.linkedin.com/in/davidzhan123/">
+                <img src="linkedin.png" style="width:30px; height:30px; padding-left: 7px;">
+            </a>
+            <a href="https://github.com/dzhan111">
+                <img src="github.png" style="width:30px; height:30px ;padding-left: 7px;">
+            </a>
+
         
+        
+            <img src="mail.png" class="copy-email" onclick="copyEmail()" style="width:30px; height:30px; padding-left: 7px;" alt="Copy Email">
+        </div>
 
     </div>
+    <div style="height:120px"></div>
 
+    <div id="projects">
+        <br>
+        <h1>currently cooking 	👨‍🍳 </h1>
+        <br>
+        <div>
+            <h3 class="inline" style="font-weight: bolder;">Portfolio</h3>
+            <p class="inline" style="color:rgb(44, 44, 44)">a sweatier version of this website</p>
+           
+            <div class="row">
+                <a href="https://github.com/dzhan111/portfolio" style="padding: 5px;">
+                    <img src="github.png" style="width:20px; height:20px">
+                </a>
+                <a href="https://portfolio-wxdh.vercel.app/" style="padding: 5px;">
+                    <img src="live.png" style="width:20px; height:20px">
+                </a>
+            </div>
+            <br><br>
+        </div>
 
+        <div>
+            <h3 class="inline" style="font-weight: bolder;">DavidDocs</h3>
+            <p class="inline" style="color:rgb(44, 44, 44)">a copy of google docs, except i made it</p>
+            
+            <div class="row">
+                <a href="https://github.com/dzhan111/DavidDocs" style="padding: 5px;">
+                    <img src="github.png" style="width:20px; height:20px">
+                </a>
+                <a href="https://david-docs.vercel.app" style="padding: 5px;">
+                    <img src="live.png" style="width:20px; height:20px">
+                </a>
+            </div>
+            <br><br>
+        </div>
 
+        <div>
+            <h3 class="inline" style="font-weight: bolder;">Social Pedometer</h3>
+            <p class="inline" style="color:rgb(44, 44, 44)">a step tracker app for you and your friends, complete with daily leaderboards + analytics (in progress)</p>
+            
+            <div class="row">
+                <a href="https://github.com/dzhan111/pedometer_app" style="padding: 5px;">
+                    <img src="github.png" style="width:20px; height:20px">
+                </a>
+            </div>
+            <br><br>
+        </div>
+    </div>
 
+    <div style="height:120px"></div>
 
+    <div id="exp">
+        <br><br>
+        <h1>Experience 🗿🗿</h1>
+        <div>
+            <h4 class="">Software Engineering Intern - Ventoscity LLC</h4> 
+            <p>summer 24</p>
+            <p class="">Designed and developed full stack mobile app for interfacing with smart underwear hardware</p>
+        </div>
+        <br><br>
+
+        <div>
+            <h4 class="">Frontend Software Engineer - keep.id</h4> 
+            <p>spring 24</p>
+            <p class="">Designed, developed, and maintained user-friendly, responsive web interfaces using React.js, Bootstrap, and Tailwind CSS, ensuring seamless user experience and accessibility compliance</p>
+        </div>
+        <br><br>
+
+        <div>
+            <h4 class="">Cinnabon Cashier - Cinnabon</h4> 
+            <p>summer 22</p>
+            <p class="">Designed and developed cinnamon rolls</p>
+        </div>
+    </div>
+
+    <div style="height:120px"></div>
+
+    <a href="#about">back to top</a>
+    <div style="height:200px"></div>
 </body>
+
 </html>
